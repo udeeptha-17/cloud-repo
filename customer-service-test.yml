@@ -1,0 +1,8 @@
+Spring:
+  application:
+    name: customer-core
+server:
+  port: '8082'
+eureka:
+  client:
+    enabled: 'false'

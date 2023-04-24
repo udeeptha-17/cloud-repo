@@ -1,0 +1,19 @@
+Spring:
+  kafka:
+    bootstrap-servers: 127.0.0.1:29092
+    consumer:
+      auto-offset-reset: earliest
+      group-id: test-kafka-cluster
+spring:
+  cloud:
+    discovery:
+      enabled: 'false'
+  redis:
+    host: localhost
+    port: '6370'
+  data:
+    redis:
+      repositories:
+        enabled: 'true'
+test:
+  topic: test_topic
