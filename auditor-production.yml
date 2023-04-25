@@ -6,7 +6,7 @@ spring:
       connectionTimeout: 20000
       maximumPoolSize: 5
     password: postgres
-    url: jdbc:postgresql://localhost:5432/postgres_database
+    url: jdbc:postgresql://postgres:5432/postgres_database
     username: postgres
   jpa:
     hibernate:
@@ -15,7 +15,7 @@ spring:
     consumer:
       auto-offset-reset: earliest
       group-id: test-kafka-cluster
-    bootstrap-servers: 127.0.0.1:9095
+    bootstrap-servers: kafka:9095
 test:
   topic: audit-topic
 
