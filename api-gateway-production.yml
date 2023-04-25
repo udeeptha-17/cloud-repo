@@ -1,7 +1,7 @@
 app:
   config:
     keycloak:
-      url: http://localhost:28080/auth
+      url: http://keycloak:28080/auth
       realm: micro-dev
 
 server:
@@ -28,7 +28,7 @@ spring:
             client-id: micro-dev-client
             client-secret: Zg2QXXWliYwiCQTPPDDYImHYkRbNdlEf
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:28080/oauth2/code/keycloak
+            redirect-uri: http://keycloak:28080/oauth2/code/keycloak
             scope: openid
       resourceserver:
         jwt:
@@ -57,4 +57,4 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-server:8761/eureka
