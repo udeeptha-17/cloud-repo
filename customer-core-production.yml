@@ -1,11 +1,11 @@
 Spring:
   kafka:
-    bootstrap-servers: 127.0.0.1:29092
+    bootstrap-servers: kafka:29092
     consumer:
       auto-offset-reset: earliest
       group-id: test-kafka-cluster
   redis:
-    host: localhost
+    host: redis
     port: '6379'
   data:
     redis:
@@ -18,4 +18,4 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.1.7:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
